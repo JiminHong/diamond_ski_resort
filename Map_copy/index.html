@@ -1,0 +1,36 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>New Wonders Of The Wold</title>
+		<link rel="stylesheet" type="text/css" href="css/interactive_map.css" />
+		<script type="text/javascript" src="includes/jquery-1.5.min.js"></script>
+	</head>
+	<body>
+
+		<h1 class="grey" style="font-size: 28px;">The New 7 Wonders Of The World</h1>
+		
+        <div class="map_container">
+
+			<!-- lines -->
+			
+			<a class="line_easy" continent="ES"></a>
+			<a class="line_diffic" continent="WE"></a>
+			
+			<!-- Form   Blank action goes to same page - not used, because jquery uses this -->
+			<form id="mapForm" name="mapForm" class="form_continent" method="post" action="">
+				<select name="continent" id="continent">
+					<option value="WE">Difficult</option>
+					<option value="ES">Easiest</option>
+					<option value="ALL" selected="selected">Show all slopes</option>
+				</select>
+			</form>
+			
+		</div>
+
+		<script type="text/javascript" src="js/interactive_map.js"></script>
+
+	</body>
+</html>
