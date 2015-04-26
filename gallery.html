@@ -1,42 +1,63 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
+<html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>CoverVid</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/styles/normalize.css" />
+	<link rel="stylesheet" href="assets/styles/styles.css" />
+<!-- Jquery -->
+	<link href='http://fonts.googleapis.com/css?family=Oswald|Quattrocento+Sans' rel='stylesheet' type='text/css'>
 
-		<title>HTML</title>
+	
+</head>
 
-		<link rel="stylesheet" type="text/css" href="assets/styles/styles.css"/>
+<body>
 
-		<script type="text/javascript" src="js/jquery-1.6.1.min.js"></script>
-      
-	</head>
+	<!-- Video Markup -->
+	
 
-	<body>	
-	<div class="chart-container">
-		<div class="chart-title">
-			<h2>Diamond Ski Resort FORECAST</h2>
-		</div>
-		<div class="chart-content">
-			<div class="chart-y-axis">
-				<p style="top:0px;">50</p>
-				<p style="bottom:0px;">0</p>
-			</div>
-		
-			<div class="chart-area" bar-spacing="30">
-				<div bar-value="40" label="Wednesday" class="chart-bar wed"></div>
-				<div bar-value="38" label="Thursday" class="chart-bar thu"></div>
-				<div bar-value="36" label="Friday" class="chart-bar fri"></div>
-				<div bar-value="39" label="Saturday" class="chart-bar sat"></div>
-				<div bar-value="35" label="Sunday" class="chart-bar sun"></div>
-			</div>
-				
-			<div class="chart-x-axis"></div>
-		</div>
-	</div>
+	<section class="masthead">
+		<video class="masthead-video" autoplay loop muted>
+			<source src="assets/videos/dreamscapes.mp4" type="video/mp4">
+			<source src="assets/videos/dreamscapes.webm" type="video/webm">
+		</video>
+		<div class="masthead-overlay"></div>
+		<div class="masthead-arrow"></div>
+		<h1>DIAMOND ski resort<span>life is better on the slopes</span></h1>
 
-	<script type="text/javascript" src="js/chart.js"></script>
-	      
-	</body>
+	</section>
+
+	<nav>
+		<a href="index.html" id="plan">PLAN</a>
+		<a href="mountain.html">MOUNTAIN</a>
+		<a href="#">GALLERY</a>
+	</nav>
+
+	</section>
+
+	<footer>
+		<p>© 1997-2015 Diamond Resorts Management Company. All Rights Reserved.</p>
+	</footer>
+
+	
+	
+	<!-- Load Scripts -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="js/covervid.js"></script>
+	<script src="assets/scripts/scripts.js"></script>
+
+	<!-- Call CoverVid -->
+	<script type="text/javascript">
+		// If using jQuery
+			 $('.masthead-video').coverVid(1920, 1080);
+		// If not using jQuery (Native Javascript)
+			//coverVid(document.querySelector('.masthead-video'), 1920, 1080);
+	</script>
+
+</body>
+
 </html>
