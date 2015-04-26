@@ -43,23 +43,48 @@
 		<a href="#">GALLERY</a>
 	</nav>
 
-	<div class="map_container">
+	<section id="mountain">
+		<h2>MOUNTAIN</h2>
+		<h3>INTERACTIVE TRAIL MAP</h3>
+		<p>At Breckenridge, you’ll find one of Colorado's favorite mountain resorts tucked away in a historic mining town. Whether you’re hungry for the adventure, or just want to enjoy some RandR, Breckenridge provides unforgettable winter and summer experiences.<p>
 
-			<!-- lines -->
+		<p>You can explore Breckenridge and the surrounding resort areas all in one place with our Resort Map or check out Breckenridge's ski runs, lifts and more on our Trail Map.</p>
+
+		<div class="map_container">			
+			<a class="line_easy" continent="ES"></a>
+			<a class="line_diffic" continent="WE"></a>
 			
-		<a class="line_easy" continent="ES"></a>
-		<a class="line_diffic" continent="WE"></a>
+			<!-- Form   Blank action goes to same page - not used, because jquery uses this -->
+			<form id="mapForm" name="mapForm" class="form_continent" method="post" action="">
+				<select name="continent" id="continent">
+					<option value="WE">Difficult</option>
+					<option value="ES">Easiest</option>
+					<option value="ALL" selected="selected">Show all slopes</option>
+				</select>
+			</form>
+			
+		</div>
+		<h3>DIAMOND forecast</h3>
+		<div class="chart-container">
+		<div class="chart-content">
+			<div class="chart-y-axis">
+				<p style="top:0px;">50</p>
+				<p style="bottom:0px;">0</p>
+			</div>
 		
-		<!-- Form   Blank action goes to same page - not used, because jquery uses this -->
-		<form id="mapForm" name="mapForm" class="form_continent" method="post" action="">
-			<select name="continent" id="continent">
-				<option value="WE">Difficult</option>
-				<option value="ES">Easiest</option>
-				<option value="ALL" selected="selected">Show all slopes</option>
-			</select>
-		</form>
-		
+			<div class="chart-area" bar-spacing="30">
+				<div bar-value="40" label="Wednesday" class="chart-bar wed"></div>
+				<div bar-value="38" label="Thursday" class="chart-bar thu"></div>
+				<div bar-value="36" label="Friday" class="chart-bar fri"></div>
+				<div bar-value="39" label="Saturday" class="chart-bar sat"></div>
+				<div bar-value="35" label="Sunday" class="chart-bar sun"></div>
+			</div>
+				
+			<div class="chart-x-axis"></div>
+		</div>
 	</div>
+
+	</section>
 
 	<footer>
 		<p>© 1997-2015 Diamond Resorts Management Company. All Rights Reserved.</p>
@@ -96,7 +121,9 @@
 	
 	<!-- main -->
 	<script src="js/script.js"></script>
-	<script type="text/javascript" src="js/interactive_map.js"></script>     
+	<script type="text/javascript" src="js/interactive_map.js"></script>  
+	<script type="text/javascript" src="js/chart.js"></script>
+   
 
 </body>
 

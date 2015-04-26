@@ -1,6 +1,10 @@
 
 
 @charset "UTF-8";
+#mountain{
+	width: 1150px;
+	margin: 0 auto;
+}
 
 /*  Interactive Map Container */
 .map_container {
@@ -9,12 +13,11 @@
 	background-position: 0px 0px;
 	height: 686px;
 	width: 1150px;
+	margin: 0 auto;
 	position: relative;
 	color: #fff;
 	font-family: Arial;
 	font-size: 12px;
-	float: right;
-	margin: 0px 0px 0px 20px;
 }
 
 .map_container a.line_diffic {
@@ -45,6 +48,7 @@
 	position: absolute;
 	top: 0;
 	z-index: 999;
+	margin: 20px 0 0 450px;
 }
 
 
