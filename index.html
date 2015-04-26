@@ -9,11 +9,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/styles/normalize.css" />
 	<link rel="stylesheet" href="assets/styles/styles.css" />
+<!-- Jquery -->
+	<link rel="stylesheet" href="js/jquery-ui-1.11.4.custom/jquery-ui.min.css" type="text/css">
+	<link rel="stylesheet" href="js/jquery-ui-1.11.4.custom/jquery-ui.structure.min.css" type="text/css">
+	<link rel="stylesheet" href="js/jquery-ui-1.11.4.custom/jquery-ui.theme.min.css" type="text/css">
+
+	<link href='http://fonts.googleapis.com/css?family=Oswald|Quattrocento+Sans' rel='stylesheet' type='text/css'>
+
+
+	
 </head>
 
 <body>
 
 	<!-- Video Markup -->
+	
+
 	<section class="masthead">
 		<video class="masthead-video" autoplay loop muted>
 			<source src="assets/videos/dreamscapes.mp4" type="video/mp4">
@@ -22,28 +33,107 @@
 		<div class="masthead-overlay"></div>
 		<div class="masthead-arrow"></div>
 		<h1>DIAMOND ski resort<span>life is better on the slopes</span></h1>
-		<!-- <a class="masthead-video-credit" href="http://vimeo.com/82495711" target="_blank">
-			<span>Video: Dreamscapes</span>
-			<span>by Jonathan Besler</span> -->
-		</a>
+
 	</section>
+
 	<nav>
 		<a href="#" id="plan">PLAN</a>
 		<a href="#">MOUNTAIN</a>
 		<a href="#">GALLERY</a>
 	</nav>
-	<section id="planTrip">
-		<!-- <div class="container"> -->
-			<h2>Why is it special?</h2>
-			<p>With five huge peaks spanning 2,908 acres, Breckenridge skiing has something for all abilities and interests. Every beginner and intermediate trail is groomed nightly so you can enjoy endless turns throughout your day. Or, ride North America’s highest chairlift, the Imperial Express, up to the high alpine bowls for unforgettable views and steeps. If you’re looking for terrain parks, Breckenridge has four—one for every skill level.
-			</p>
 
-		<!-- </div> -->
-	</section>
+	<section id="planTrip">					
+		<h2>PLAN A TRIP</h2>
+		<p>Whether it’s your first time to Colorado or your 10th time to Breckenridge, we want to provide you with the planning tools to make your vacation a seamless and unforgettable experience. Breckenridge offers the variety of lodging, and activities to give your group the flexibility to make it the perfect vacation.</p>
 
+		<p>We are a one-stop shop for vacation planning needs. Starting with you air or car travel all the way through to flights, we can take care of your reservations. With lodging options for every taste and budget, we can help determine the perfect match for you. If you ever need help call our customer care center at (800) 536-1890, or 001-970-496-4700.</p>
+
+		<h3 id="lodging_click">1. ENTER YOUR LODGING DATES AND NUMBER OF TRAVELERS</h3>
+
+		<section id="lodging">
+			<div class="col_1_2">
+			<h4>Lodging Dates:</h4>
+				<p>Check in date: <input type="text" id="datepicker"></p>
+				<!-- <p>Check out date: <input type="text" id="datepicker" class="hasDatepicker"></p> -->
+			</div>
+			<div class="col_1_2">
+			<form>
+				<fieldset>
+					<h4>Travelers</h4>
+				    <select name="number" id="number">
+				      <option>1</option>
+				      <option selected="selected">2</option>
+				      <option>3</option>
+				      <option>4</option>
+				      <option>5</option>
+				      <option>6</option>
+				      <option>7</option>
+				      <option>8</option>
+				      <option>9</option>
+				      <option>10</option>
+				      <option>11</option>
+				      <option>12</option>
+				      <option>13</option>
+				      <option>14</option>
+				      <option>15</option>
+				      <option>16</option>
+				      <option>17</option>
+				      <option>18</option>
+				      <option>19</option>
+				    </select>
+				</fieldset>
+			</form>
+			</div>
+		</section>
+
+		<section>
+		<h3>2. SELECT LODGING PREFERENCES (OPTIONAL)</h3>
+			<form action="#">
+			  <fieldset>
+			    <h4>Select a type of lodging</h4>
+			    <select name="speed" id="speed">
+			      <option selected="selected">Any type of Lodging</option>
+			      <option>Hotel</option>
+			      <option>1 Bedroom Condominium</option>
+			      <option>2 Bedroom Condominium</option>
+			      <option>3 Bedroom Condominium</option>
+			      <option>4 Bedroom Condominium</option>
+			      <option>5 Bedroom Condominium</option>
+			      <option>Bed and Breakfast</option>
+			      <option>Private Home</option>
+			      <option>Studio Condominium</option>
+			    </select>
+			  </fieldset>
+			</form>
+
+		<h4>Lodging amenities:</h4>
+		<form action="demo_form.asp" method="get">
+		  <div class="col_1_4">
+		  	<input type="checkbox" name="amenities" value="hotTub"> Hot Tub
+		  </div>
+		  <div class="col_1_4">
+		  	<input type="checkbox" name="amenities" value="pool"> Pool
+		  </div>
+		  <div class="col_1_4">
+		  	<input type="checkbox" name="amenities" value="shuttle"> On Shuttle route
+		  </div>
+		  <div class="col_1_4">
+		  	<input type="checkbox" name="amenities" value="slope"> Close to slopes
+		  </div>
+		  <button type="submit">Submit</button>
+		</form>
+		</section>
+	</section>  
+
+	<footer>
+		<p>© 1997-2015 Diamond Resorts Management Company. All Rights Reserved.</p>
+	</footer>
+
+	
+	
 	<!-- Load Scripts -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="covervid.js"></script>
+	<script src="js/covervid.js"></script>
 	<script src="assets/scripts/scripts.js"></script>
 
 	<!-- Call CoverVid -->
@@ -54,15 +144,24 @@
 			//coverVid(document.querySelector('.masthead-video'), 1920, 1080);
 	</script>
 
-	<script>
-        $(document).ready(function() {
-          $('#plan').click(function(){
-          	event.preventDefault();
-            $('#planTrip').slideToggle(300);
-            $(this).toggleClass('close');
-          });
-        });
-    </script>
+	 <script>
+ //        $(document).ready(function() {
+ //          $('#plan').click(function(){
+ //          	event.preventDefault();
+ //            $('#planTrip').slideToggle(300);
+ //            $(this).toggleClass('close');
+ //          });
+ //        });
+ //     </script>
+
+	<!-- jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+	<!-- plugins -->
+
+	
+	<!-- main -->
+	<script src="js/script.js"></script>     
 
 </body>
 

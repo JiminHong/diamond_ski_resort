@@ -1,21 +1,24 @@
 /**
  * Masthead
+font-family: 'Oswald', sans-serif;
+font-family: 'Quattrocento Sans', sans-serif;
+
+
  * -------------------------------------------------------------------------- */
 html {
     -webkit-font-smoothing: antialiased;
-
 }
 
 body{
     background-image: url("../images/bg.png");
-
+    font-family: 'Quattrocento Sans', sans-serif;
 }
 
 nav{
     height: 50px;
     background-image: url("../images/bg_darker.png");
     text-align: center;
-    line-height: 3em;
+    line-height: 3em;  
 }
 
 nav > a{
@@ -27,6 +30,12 @@ nav > a:hover{
     background-image: url("../images/bg.png");
 }
 
+#planTrip{
+    /*display: none;*/
+    width: 65%;
+    margin: 0 auto;
+}
+
 
 .masthead {
     position: relative;
@@ -34,6 +43,13 @@ nav > a:hover{
 }
 .masthead-video {
     z-index: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    height: auto;
+    width: 100%;
 }
 .masthead-overlay {
     background-color: #000;
@@ -85,12 +101,16 @@ nav > a:hover{
     border-bottom: 2px solid #fff;
     opacity: 0.4;
 }
+
+h1, h2, h3, h4{
+    font-family: 'Oswald', sans-serif;
+    color: #dbdbdb;
+}
+
 h1 {
     position: absolute;
     width: 100%;
-    font-family: 'HelveticaNeue-UltraLight', helvetica, sans-serif;
     font-weight: bold;
-    letter-spacing: -0.06em;
     font-size: 120px;
     text-align: center;
     height: 120px;
@@ -105,7 +125,6 @@ h1 span {
     display: block;
     font-size: 24px;
     letter-spacing: 5px;
-    font-family: 'HelveticaNeue-Thin', sans-serif;
     font-weight: 100;
     text-transform: uppercase;
     padding-left: 30px;
@@ -114,158 +133,85 @@ h2 {
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 40px;
-    letter-spacing: -0.05em;
     color: #dbdbdb;
 }
+
+h3{
+    padding-top: 30px;
+}
+
+h4{
+    margin-top: 0;
+}
+
 p {
     margin-top: 0;
-    margin-bottom: 30px;
     font-size: 18px;
     color: #dbdbdb;
     letter-spacing: -0.02em;
-    font-family: helvetica, sans-serif;
     font-weight: 100;
     line-height: 1.5;
+    color: #dbdbdb;
 }
+
 a {
     color: #2096b1;
     text-decoration: none;
 }
-ol {
-    list-style: none;
-    padding: 0;
+
+fieldset {
+  border: 0;
+  padding: 0;
+}
+
+.inputP{
+    color: #dbdbdb;
     margin: 0;
 }
-ol li {
-    position: relative;
-    margin-bottom: 24px;
-    font-size: 18px;
-    color: #414141;
-    letter-spacing: -0.02em;
-    font-family: helvetica, sans-serif;
-    font-weight: 100;
-    line-height: 1.5;
-    padding-left: 70px;
+
+label {
+  display: block;
+  margin: 30px 0 0 0;
+  color: #dbdbdb;
+  margin-top: 0;
 }
-ol li:after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50px;
+
+select {
+  width: 200px;
+}
+
+button{
+    margin-top: 30px;
+    padding: 5px 30px;
+}
+
+.overflow {
+  height: 200px;
+}
+
+.col_1_2{
+    width: 50%;
+    float: left;
+}
+
+.col_1_4{
+    width: 25%;
+    float: left;
+    color: #dbdbdb;
+}
+
+section{
+    clear: both;
+}
+
+footer{
+    margin-top: 50px;
     height: 50px;
-    border-radius: 50px;
+    background-image: url("../images/bg_darker.png");
     text-align: center;
-    font-family: 'HelveticaNeue-Thin', helvetica, sans-serif;
-    font-weight: 100;
-    color: #fff;
-    font-size: 30px;
-    line-height: 50px;
-    background-color: #353535;
-}
-ol li:nth-child(1):after {
-    content: '1';
-}
-ol li:nth-child(2):after {
-    content: '2';
-}
-ol li:nth-child(3):after {
-    content: '3';
-}
-ol li:nth-child(4):after {
-    content: '4';
-}
-code {
-    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    background: #f7f7f7;
-    padding: 4px;
-    border-radius: 6px;
-    font-size: 0.9em;
-}
-pre {
-    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    font-size: 14px;
-    background: #f7f7f7;
-    padding: 20px;
-    border-radius: 10px;
-    line-height: 1.4;
-}
-pre .s {
-    color: #d14;
-}
-pre .na {
-    color: #008080;
-}
-pre .nt {
-    color: #000080;
-}
-pre .s {
-    color: #d14;
-}
-pre .nc {
-    color: #445588;
-}
-pre .m {
-    color: #009999;
-}
-.content {
-    padding-top: 60px;
-}
-.container {
-    margin: auto;
-    width: 720px;
-}
-footer {
-    text-align: right;
-    margin-top: 60px;
-    padding-bottom: 60px;
-}
-footer hr {
-    margin: 0;
-    border: none;
-    border-top: 1px solid #ddd;
-    margin-bottom: 30px;
 }
 
-
-
-
-
-
-
-
-
-/* The style for the dropdown login
--------------------------------------------------------------- */
-nav#nav-container {
-    border-top:solid 1px rgb(220,220,220);
-    border-bottom:solid 1px rgb(220,220,220);
-    margin-bottom:18px;
-    line-height:40px;
-}
-
-nav#links {
-    width:724px;
-    float:left;
-}
-
-nav#links ul {
-    list-style-type:none;
-    margin:0;
-    padding:0;
-}
-
-#links ul li {
-    margin:0 12px;
-    padding:0;
-    float:left;
-    text-align:center;
-}
-
-#links ul li a {
-    display:block;
-    padding:0 12px;
-}
-#planTrip {
-    display:none;
+footer > p{
+    line-height: 3em;
 }
 

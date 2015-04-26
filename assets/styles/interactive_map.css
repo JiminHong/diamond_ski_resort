@@ -1,0 +1,50 @@
+
+
+@charset "UTF-8";
+
+/*  Interactive Map Container */
+.map_container {
+	background-image: url(../images/map.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	height: 686px;
+	width: 1150px;
+	position: relative;
+	color: #fff;
+	font-family: Arial;
+	font-size: 12px;
+	float: right;
+	margin: 0px 0px 0px 20px;
+}
+
+.map_container a.line_diffic {
+	background-image: url(../images/easy.png);
+	width: 1150px;
+	height: 686px;
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	display: block;
+	position: absolute;
+	z-index: 9;
+	cursor: pointer;
+}
+
+.map_container a.line_easy {
+	background-image: url(../images/difficult.png);
+	width: 1150px;
+	height: 686px;
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	display: block;
+	position: absolute;
+	z-index: 9;
+	cursor: pointer;
+}
+
+.map_container .form_continent {
+	position: absolute;
+	top: 0;
+	z-index: 999;
+}
+
+
