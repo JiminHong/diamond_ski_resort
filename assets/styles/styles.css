@@ -31,6 +31,10 @@ nav > a:hover{
     background-image: url("../images/bg.png");
 }
 
+.selected{
+    background-image: url("../images/bg.png");
+}
+
 #planTrip{
     /*display: none;*/
     width: 65%;
@@ -205,7 +209,23 @@ section{
     clear: both;
 }
 
+#gallery{
+    width: 960px;
+    margin: 0 auto;
+}
+.shuffle-group {
+      position: relative;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+.shuffle-me{
+    float: left;
+    margin: 10px;
+}
+
 footer{
+    clear: both;
     margin-top: 50px;
     height: 50px;
     background-image: url("../images/bg_darker.png");
@@ -264,8 +284,4 @@ footer > p{
 
 
 .chart-area .chart-bar p { margin: 5px 0px 0px 0px; text-align: center; color: #fff; }
-
-
-
-
 

@@ -1,63 +1,104 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CoverVid</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/styles/normalize.css" />
+    <link rel="stylesheet" href="assets/styles/styles.css" />
+    <!-- Jquery -->
+    <link rel="stylesheet" href="js/jquery-ui-1.11.4.custom/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="js/jquery-ui-1.11.4.custom/jquery-ui.structure.min.css" type="text/css">
+    <link rel="stylesheet" href="js/jquery-ui-1.11.4.custom/jquery-ui.theme.min.css" type="text/css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="jquery.shuffle-images.js"></script>
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CoverVid</title>
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="assets/styles/normalize.css" />
-	<link rel="stylesheet" href="assets/styles/styles.css" />
-<!-- Jquery -->
-	<link href='http://fonts.googleapis.com/css?family=Oswald|Quattrocento+Sans' rel='stylesheet' type='text/css'>
+    <script>
+      $(document).ready(function(){
+         $(".shuffle-me").shuffleImages({
+           target: ".images > img"
+         });
+      });
+    </script>
 
-	
-</head>
+    <link href='http://fonts.googleapis.com/css?family=Oswald|Quattrocento+Sans' rel='stylesheet' type='text/css'>
+    
+  </head>
 
-<body>
+  <body>
+      <section class="masthead">
+      <video class="masthead-video" autoplay loop muted>
+        <source src="assets/videos/dreamscapes.mp4" type="video/mp4">
+        <source src="assets/videos/dreamscapes.webm" type="video/webm">
+      </video>
+      <div class="masthead-overlay"></div>
+      <div class="masthead-arrow"></div>
+      <h1>DIAMOND ski resort<span>life is better on the slopes</span></h1>
 
-	<!-- Video Markup -->
-	
+    </section>
 
-	<section class="masthead">
-		<video class="masthead-video" autoplay loop muted>
-			<source src="assets/videos/dreamscapes.mp4" type="video/mp4">
-			<source src="assets/videos/dreamscapes.webm" type="video/webm">
-		</video>
-		<div class="masthead-overlay"></div>
-		<div class="masthead-arrow"></div>
-		<h1>DIAMOND ski resort<span>life is better on the slopes</span></h1>
+    <nav>
+      <a href="index.html" id="plan">PLAN</a>
+      <a href="mountain.html">MOUNTAIN</a>
+      <a href="gallery.html" class="selected">GALLERY</a>
+    </nav>
+    <div id="gallery">
+      <h2>Gallery</h2>
+      <section>
+        <div class="shuffle-group">
+          <div data-si-mousemove-trigger="100" class="shuffle-me">
+            <div class="images">   
+              <img src="assets/images/gallery/1.png">
+              <img src="assets/images/gallery/3.png">
+              <img src="assets/images/gallery/5.png">
+            </div>
+          </div>
+          <div data-si-mousemove-trigger="100" class="shuffle-me">
+            <div class="images">
+              <img src="assets/images/gallery/2.png">
+              <img src="assets/images/gallery/4.png">
+              <img src="assets/images/gallery/6.png">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="shuffle-group">
+          <div data-si-mousemove-trigger="100" class="shuffle-me">
+            <div class="images">
+              <img src="assets/images/gallery/8.png">
+              <img src="assets/images/gallery/10.png">
+              <img src="assets/images/gallery/12.png">
+            </div>
+          </div>
+          <div data-si-mousemove-trigger="100" class="shuffle-me">
+            <div class="images">
+              <img src="assets/images/gallery/7.png">
+              <img src="assets/images/gallery/9.png">
+              <img src="assets/images/gallery/11.png">
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
 
-	</section>
+    <footer>
+    <p>© 1997-2015 Diamond Resorts Management Company. All Rights Reserved.</p>
+    </footer>
+  
+    
+    <!-- Load Scripts -->
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+    <script src="js/covervid.js"></script>
+    <script src="assets/scripts/scripts.js"></script>
 
-	<nav>
-		<a href="index.html" id="plan">PLAN</a>
-		<a href="mountain.html">MOUNTAIN</a>
-		<a href="#">GALLERY</a>
-	</nav>
+    <!-- Call CoverVid -->
+    <script type="text/javascript">
+         $('.masthead-video').coverVid(1920, 1080);
+    </script>
 
-	</section>
 
-	<footer>
-		<p>© 1997-2015 Diamond Resorts Management Company. All Rights Reserved.</p>
-	</footer>
-
-	
-	
-	<!-- Load Scripts -->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="js/covervid.js"></script>
-	<script src="assets/scripts/scripts.js"></script>
-
-	<!-- Call CoverVid -->
-	<script type="text/javascript">
-		// If using jQuery
-			 $('.masthead-video').coverVid(1920, 1080);
-		// If not using jQuery (Native Javascript)
-			//coverVid(document.querySelector('.masthead-video'), 1920, 1080);
-	</script>
-
-</body>
-
+  </body>
 </html>
